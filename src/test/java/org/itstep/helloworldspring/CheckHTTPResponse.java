@@ -20,4 +20,10 @@ public class CheckHTTPResponse {
         Assertions.assertEquals("Hello World from Spring Boot",
                 testRestTemplate.getForObject("http://localhost:"+port+"/",String.class));
     }
+
+    @Test
+    public void shouldPassIfStringMatchesBye(){
+        Assertions.assertEquals("Hello World from Spring Boot",
+                testRestTemplate.getForObject("http://localhost:"+port+"/bye",String.class));
+    }
 }
